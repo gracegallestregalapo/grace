@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;0,900;1,200;1,500;1,600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #202020;
+    z-index: 100;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin:0 auto;
+    padding: 0 20px;
+}
+
+.navbar{
+   
+    justify-content: space-between;
+}
+
+.nav-links{
+    gap: 20px;
+    list-style: none;
+}
+.navbar a{
+    padding: 20px 0;
+    display: inline-block;
+    color: aliceblue;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.navbar a:hover{
+    color:#e98ee0;
+}
+
+.homepage{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: url(images/Top-10-Things-You-Should-Know-About-Baguio.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.homepage::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.homepage .content {
+    position: relative;
+    height: 85%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.homepage .text{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.homepage .text h1{
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 10px;
+
+}
+
+.homepage a{
+    color: #333;
+    text-decoration: none;
+    background: #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    box-shadow: rgba(0, 0, 0, 0.3);
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.homepage a:hover{
+    color: #fff;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+
+/* ABOUT */
+
+.wrapper{
+    background: #ff98983b;
+    backdrop-filter: blur(100px);
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+.testimonial{
+    margin-top:80px;
+    text-align: center;
+}
+
+.testimonial h1{
+    font-size: 40px;
+    color: #ff810a;
+    text-decoration:underline;
+    padding: 20px 10px;
+}
+
+.testimonial img{
+    border-radius: 200px;
+    box-shadow:0 8px 6px -1px #202020;
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    transition: all 1.1s;
+}
+
+.testimonial img:hover{
+    transform: scale(1.5,1.1);
+    cursor: pointer;
+}
+.testimonial blockquote{
+    margin-top: 3%;
+    text-align:center;
+    padding:0 15%;
+}
+
+.testimonial h5{
+    padding: 4px;
+    font-size: 25px;
+    color: #ff810a;
+    text-decoration: underline;
+}
+
+.testimonial p{
+    font-size: 30px;
+}
+
+
+
+
+
+
+/* GALLERY */
+
+.gallery-selection{
+    width: 100%;
+    background-color: #f0a7ea76;
+}
+.gallery-selection .gallery-wrap{
+    padding: 10px;
+}
+
+.gallery-selection .gallery-wrap .gallery-images{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 20px;
+}
+
+.gallery-selection .gallery-wrap .gallery-images .gallery{
+    width: 100%;
+    position: relative;
+}
+
+.gallery-selection .gallery-wrap .gallery-images .gallery .image-section{
+    width: 100%;
+}
+
+.gallery-selection .gallery-wrap .gallery-images .gallery .image-section img{
+    width: 100%;
+    margin-top: 150px;
+    height: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    display: block;
+}
+
+.gallery-selection .gallery-wrap .gallery-images .gallery .caption{
+    margin-top: 100px;
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    padding: 10px;
+    top: 100px;
+    left: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.30s;
+
+}
+.gallery-selection .gallery-wrap .gallery-images .gallery .caption:hover{
+    opacity: 1;
+}
+
+.gallery-selection .gallery-wrap .gallery-images .gallery p{
+    font-size: 13px;
+}
+
+@media screen and (max-width:992px) {
+    .gallery-selection .gallery-wrap .gallery-images{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .gallery-selection .gallery-wrap .gallery-images{
+        grid-template-columns:1fr;
+    }
+}
+
+
+/* contact */
+
+.cc{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px 100px;
+}
+
+.cc:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 150%;
+    background: url(images/Top-10-Things-You-Should-Know-About-Baguio.jpg)no-repeat center;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(30px);
+
+}
+
+.contact-box{
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+}
+
+.left{
+    height: 100%;
+    background: url(images/Top-10-Things-You-Should-Know-About-Baguio.jpg)no-repeat center;
+    background-size: cover;
+}
+
+.rigth{
+    margin-top: 200px;
+    padding: 25px 40px;
+}
+
+.rigth h2{
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.rigth h2:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: #2ecc2e;
+}
+
+.field{
+    width: 100%;
+    padding: 0.5re 1rem;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0);
+    background-color: rgba(230, 230, 230, 0.6);
+    font-size:1.1rem;
+    margin-bottom: 22px;
+    transition: .3s;
+}
+
+.field:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.field:focus{
+    background-color: #fff;
+    border: 2px solid rgba(30, 85, 250, 0.47);
+}
+
+.area{
+    min-height: 150px;
+}
+
+
+.btn{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    background-color: #2ecc2e;
+    cursor:pointer;
+    outline: none;
+    border: none;
+    color: #fff;
+    transition: .3s;
+}
+
+.btn:hover{
+    background-color: blue;
+}
+
+
+
+@media screen and (max-width:880px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .left {
+        height: 200px;
+    }
+}
+
+
+
